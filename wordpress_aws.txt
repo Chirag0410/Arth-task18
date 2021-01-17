@@ -1,0 +1,23 @@
+Following are some Steps to setup the wordpress are:
+
+1. Launch an EC2 instance over AWS and Connect to it.
+2. we have to Install some required softwares, that are
+    a)  httpd (-   Command to install httpd :   dnf install httpd -y)
+    b)  php version 7.4 or more (-   Command to install php   : 
+          #  yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+          #  yum -y install https://rpms.remirepo.net/enterprise/remi-release-8.rpm
+          #  yum install php:remi-7.4
+          ****if you are dealing with any error while installing php:remi-7.4 so use command :- 
+          1. dnf module enable php:remi-7.4 -y
+          2. dnf install php php-cli php-common
+          3. php -v )
+    c)  php-mysqlnd (-   Command to install php-mysqlnd:   dnf install php-mysqlnd)
+    d)  mysql (-   Command to install mysql :   dnf install mysql -y)
+
+3.  Download the wordpress zip file, 
+    command:    wget https://wordpress.org/latest.tar.gz
+    Unzip this file:
+    Command :    tar -xzvf latest.tar.gz
+    
+4.  To access the wordpress: 
+    URL :  Public_IP_of_ec2_instance/
